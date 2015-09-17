@@ -22,7 +22,7 @@ Full path to text file with course IDs, one per line.
 ## License
 
 ```
-Copyright [2015] [Cameron Finn Kelly]
+Copyright 2015 Cameron Finn Kelly
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
