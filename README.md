@@ -3,6 +3,8 @@ BB to LRS via Kettle
 
 *Note that these files contain no database connection data and will require this to work*
 
+*LRS connection data exists (because including it has no implications for security), but will be inaccurate since the job was run against a local LRS*
+
 ## How it works:
 
 	kitchen /file JOBFILE COURSEFILE
