@@ -1,14 +1,16 @@
 BB to LRS via Kettle
 ====================
 
+*Note that these files contain no database connection data and will require this to work*
+
 ## How it works:
 
-	kitchen /file *jobfile* *coursefile*
+	kitchen /file JOBFILE COURSEFILE
 
-### jobfile
+### JOBFILE
 
 Full path to marist_bb_to_lrs.kjb. Run by Kitchen.
 
-### coursefile
+### COURSEFILE
 
 Full path to text file with course IDs, one per line.
