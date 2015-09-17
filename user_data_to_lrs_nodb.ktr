@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>user_data_to_lrs</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2015&#x2f;07&#x2f;07 14&#x3a;58&#x3a;16.311</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2015&#x2f;07&#x2f;07 14&#x3a;58&#x3a;16.311</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>this is actually a bad use of an LRS &#x28;necessitated by not yet having a proper data warehousing infrastructure here&#x29;&#xd;&#xa;as is partially evidenced by the way I had to make up a lot of IRIs for things that don&#x27;t and probably shouldn&#x27;t exist&#xd;&#xa;the bright side is that this should be easy to turn into a less hairy transform &#xd;&#xa;all it needs is input that&#x27;s actually sensible to record in an LRS &#x28;ie. actual experiences&#x29;&#xd;&#xa;</note>
+      <xloc>1423</xloc>
+      <yloc>541</yloc>
+      <width>1522</width>
+      <heigth>211</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>not all the indicators described in the paper are actually possible to implement against blackboard here&#xd;&#xa;not implemented&#x3a;&#xd;&#xa;SAT&#x2f;APTITUDE_SCORE&#xd;&#xa;FTPT&#xd;&#xa;CLASS &#x28;replaced with BAMA&#x29;&#xd;&#xa;CUM_GPA&#xd;&#xa;ACADEMIC_STANDING&#xd;&#xa;RMN_SCORE_PARTIAL &#x28;not clear that this one is even technically possible in blackboard, but YMMV&#x29;&#xd;&#xa;ONLINE &#x28;could be implemented but unless you&#x27;re going to run this transform multiple times a day there doesn&#x27;t seem to be much point&#x29;</note>
+      <xloc>915</xloc>
+      <yloc>1280</yloc>
+      <width>1818</width>
+      <heigth>370</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <order>
+  <hop> <from>get filenames</from><to>read course ids from file</to><enabled>Y</enabled> </hop>
+  <hop> <from>read course ids from file</from><to>query db with course ids</to><enabled>Y</enabled> </hop>
+  <hop> <from>query db with course ids</from><to>db row to xapi statement</to><enabled>Y</enabled> </hop>
+  <hop> <from>db row to xapi statement</from><to>statement to lrs</to><enabled>Y</enabled> </hop>
+  <hop> <from>statement to lrs</from><to>inner log</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>db row to xapi statement</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var xApiVersion &#x3d; xApiVersion&#x3b;&#xd;&#xa;&#xd;&#xa;var name &#x3d; MIDDLENAME &#x3d;&#x3d; null &#x3f; FIRSTNAME &#x2b; &#x27; &#x27; &#x2b; LASTNAME &#x3a; FIRSTNAME &#x2b; &#x27; &#x27; &#x2b; MIDDLENAME &#x2b; &#x27; &#x27; &#x2b; LASTNAME&#x3b;&#xd;&#xa;&#xd;&#xa;var statement &#x3d; &#x27;&#x5c;&#xd;&#xa;	&#x7b;&#x5c;&#xd;&#xa;		&#x22;actor&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;			&#x22;objectType&#x22;&#x3a; &#x22;Agent&#x22;,&#x5c;&#xd;&#xa;			&#x22;mbox&#x22;&#x3a; &#x22;mailto&#x3a;no-reply&#x40;ic.uva.nl&#x22;,&#x5c;&#xd;&#xa;			&#x22;name&#x22;&#x3a; &#x22;Blackboard Student Retention System&#x22;&#x5c;&#xd;&#xa;		&#x7d;,&#x5c;&#xd;&#xa;		&#x22;verb&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;			&#x22;id&#x22;&#x3a; &#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;verbs&#x2f;risk-analyzed&#x22;,&#x5c;&#xd;&#xa;			&#x22;display&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;				&#x22;en-US&#x22;&#x3a; &#x22;analyzed risk indicators for&#x22;&#x5c;&#xd;&#xa;			&#x7d;&#x5c;&#xd;&#xa;		&#x7d;,&#x5c;&#xd;&#xa;		&#x22;object&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;			&#x22;objectType&#x22;&#x3a; &#x22;Agent&#x22;,&#x5c;&#xd;&#xa;			&#x22;name&#x22;&#x3a; &#x22;&#x27; &#x2b; name &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;			&#x22;mbox&#x22;&#x3a; &#x22;mailto&#x3a;&#x27; &#x2b; EMAIL &#x2b; &#x27;&#x22;&#x5c;&#xd;&#xa;		&#x7d;,&#x5c;&#xd;&#xa;		&#x22;context&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;			&#x22;contextActivities&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;				&#x22;parent&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;					&#x22;id&#x22;&#x3a; &#x22;http&#x3a;&#x2f;&#x2f;studiegids.uva.nl&#x2f;system&#x2f;that&#x2f;doesnt&#x2f;exist&#x2f;&#x27; &#x2b; COURSEPK1 &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;					&#x22;definition&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;						&#x22;type&#x22;&#x3a; &#x22;http&#x3a;&#x2f;&#x2f;adlnet.gov&#x2f;expapi&#x2f;activities&#x2f;course&#x22;,&#x5c;&#xd;&#xa;						&#x22;name&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;							&#x22;en-US&#x22;&#x3a; &#x22;&#x27; &#x2b; COURSE_ID &#x2b; &#x27;&#x22;&#x5c;&#xd;&#xa;						&#x7d;,&#x5c;&#xd;&#xa;						&#x22;extensions&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;							&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;ba-ma&#x22;&#x3a;&#x22;&#x27; &#x2b; BAMA &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;							&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;course-user-total&#x22;&#x3a;&#x22;&#x27; &#x2b; ENROLLMENT &#x2b; &#x27;&#x22;&#x5c;&#xd;&#xa;						&#x7d;&#x5c;&#xd;&#xa;					&#x7d;&#x5c;&#xd;&#xa;				&#x7d;&#x5c;&#xd;&#xa;			&#x7d;&#x5c;&#xd;&#xa;		&#x7d;,&#x5c;&#xd;&#xa;		&#x22;result&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;			&#x22;extensions&#x22;&#x3a; &#x7b;&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-gender&#x22;&#x3a;&#x22;&#x27; &#x2b; GENDER &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-age&#x22;&#x3a;&#x22;&#x27; &#x2b; AGE &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-login-ratio&#x22;&#x3a; &#x22;&#x27; &#x2b; R_LOGINS &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-opened-session-ratio&#x22;&#x3a;&#x22;&#x27; &#x2b; R_SESSIONS &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-read-content-ratio&#x22;&#x3a;&#x22;&#x27; &#x2b; R_CONTENT_READ &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-viewed-forum-ratio&#x22;&#x3a;&#x22;&#x27; &#x2b; R_FORUM_VIEWS &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-posted-forum-ratio&#x22;&#x3a;&#x22;&#x27; &#x2b; R_FORUM_POSTS &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-assignment-submitted-ratio&#x22;&#x3a;&#x22;&#x27; &#x2b; R_ASN_SUB &#x2b; &#x27;&#x22;,&#x5c;&#xd;&#xa;				&#x22;http&#x3a;&#x2f;&#x2f;registry.ic.uva.nl&#x2f;xAPI&#x2f;properties&#x2f;that&#x2f;dont&#x2f;exist&#x2f;student-assessment-submitted-ratio&#x22;&#x3a;&#x22;&#x27; &#x2b; R_ASMT_SUB &#x2b; &#x27;&#x22;&#x5c;&#xd;&#xa;			&#x7d;&#x5c;&#xd;&#xa;		&#x7d;,&#x5c;&#xd;&#xa;		&#x22;timestamp&#x22;&#x3a; &#x22;&#x27; &#x2b; TIME_STAMP &#x2b; &#x27;&#x2b;01&#x3a;00&#x22;&#x5c;&#xd;&#xa;	&#x7d;&#x5c;&#xd;&#xa;&#x27;&#x3b;</jsScript_script>
+      </jsScript>      <jsScript>        <jsScript_type>1</jsScript_type>
+        <jsScript_name>Item_0</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var xApiVersion &#x3d; &#x27;1.0.1&#x27;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>statement</name>
+        <rename>statement</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>xApiVersion</name>
+        <rename>xApiVersion</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1422</xloc>
+      <yloc>823</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get filenames</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>cl</name>
+        <variable>&#x24;&#x7b;courselist_file&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>743</xloc>
+      <yloc>789</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>inner log</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      <field>
+        <name>response</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2134</xloc>
+      <yloc>820</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>query db with course ids</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>bbdev01</connection>
+    <sql>select&#xd;&#xa;	cm.pk1 as coursepk1,&#xd;&#xa;	cm.course_id,&#xd;&#xa;	-- AYY THIS IS IMPORTANT&#xd;&#xa;	-- THIS IS HOW WE ENCODE BAMA INFORMATION IN COURSE ID AT UVA&#xd;&#xa;	-- THIS IS PROBABLY NOT HOW YOU DO IT AT YOUR INSTITUTION, SO ADAPT ACCORDINGLY&#xd;&#xa;	&#x28;case substr&#x28;regexp_substr&#x28;course_id,&#x27;&#x5e;&#x5c;w&#x2a;&#x5c;.&#x5c;d&#x7b;4&#x7d;&#x27;&#x29;,-1,1&#x29;&#xd;&#xa;		when &#x27;0&#x27; then &#x27;other&#x27;&#xd;&#xa;		when &#x27;1&#x27; &#x7c;&#x7c; &#x27;2&#x27; &#x7c;&#x7c; &#x27;3&#x27; then &#x27;bachelor&#x27;&#xd;&#xa;		when &#x27;4&#x27; then &#x27;master&#x27;&#xd;&#xa;		else null&#xd;&#xa;	end&#x29; bama,&#xd;&#xa;	enr.enrollment,&#xd;&#xa;	cu.user_pk1,&#xd;&#xa;	cu.gender,&#xd;&#xa;	cu.age,&#xd;&#xa;	cu.firstname,&#xd;&#xa;	cu.middlename,&#xd;&#xa;	cu.lastname,&#xd;&#xa;	cu.email,&#xd;&#xa;	user_logins.amount &#x2f; &#x28;course_logins.amount &#x2f; enr.enrollment&#x29; as r_logins,&#xd;&#xa;	user_sessions.amount &#x2f; &#x28;course_sessions.amount &#x2f; enr.enrollment&#x29; as r_sessions,&#xd;&#xa;	user_cont.amount &#x2f; &#x28;course_cont.amount &#x2f; enr.enrollment&#x29; as r_content_read,&#xd;&#xa;	forum_views.user_total &#x2f; &#x28;forum_views.course_total &#x2f; enr.enrollment&#x29; as r_forum_views,&#xd;&#xa;	forum_posts.user_posts &#x2f; &#x28;forum_posts.course_posts &#x2f; enr.enrollment&#x29; as r_forum_posts,&#xd;&#xa;	attempts.asn_users_total &#x2f; &#x28;attempts.asn_course_total &#x2f; enr.enrollment&#x29; as r_asn_sub,&#xd;&#xa;	attempts.asmt_users_total &#x2f; &#x28;attempts.asmt_course_total &#x2f; enr.enrollment&#x29; as r_asmt_sub,&#xd;&#xa;	to_char&#x28;sysdate,&#x27;YYYY-MM-DD&#x22;T&#x22;HH&#x3a;mm&#x3a;SS&#x27;&#x29; as time_stamp&#xd;&#xa;from bb_bb60.course_main cm&#xd;&#xa;left join &#x28;&#xd;&#xa;	select&#xd;&#xa;		icu.crsmain_pk1,&#xd;&#xa;		u.user_pk1,&#xd;&#xa;		u.gender,&#xd;&#xa;		floor&#x28;months_between&#x28;sysdate, u.birthdate&#x29; &#x2f; 12&#x29; as age,&#xd;&#xa;		u.firstname,&#xd;&#xa;		u.middlename,&#xd;&#xa;		u.lastname,&#xd;&#xa;		u.email&#xd;&#xa;	from bb_bb60.course_users icu&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1 as user_pk1,&#xd;&#xa;			gender,&#xd;&#xa;			birthdate,&#xd;&#xa;			firstname,&#xd;&#xa;			middlename,&#xd;&#xa;			lastname,&#xd;&#xa;			email&#xd;&#xa;		from bb_bb60.users&#xd;&#xa;	&#x29; u&#xd;&#xa;	on icu.users_pk1 &#x3d; u.user_pk1&#xd;&#xa;&#x29; cu&#xd;&#xa;on cm.pk1 &#x3d; cu.crsmain_pk1&#xd;&#xa;left join &#x28;&#xd;&#xa;	select&#xd;&#xa;		crsmain_pk1,&#xd;&#xa;		count&#x28;&#x2a;&#x29; as enrollment&#xd;&#xa;	from bb_bb60.course_users&#xd;&#xa;	group by crsmain_pk1&#xd;&#xa;&#x29; enr&#xd;&#xa;on cu.crsmain_pk1 &#x3d; enr.crsmain_pk1&#xd;&#xa;&#xd;&#xa;left join &#x28;&#xd;&#xa;	select&#xd;&#xa;		user_pk1,&#xd;&#xa;		count&#x28;&#x2a;&#x29; as amount&#xd;&#xa;	from bb_bb60.activity_accumulator aa&#xd;&#xa;	where aa.event_type &#x3d; &#x27;LOGIN_ATTEMPT&#x27; &#xd;&#xa;	and aa.data like &#x27;&#x25;Login succeeded.&#x25;&#x27;&#xd;&#xa;	group by user_pk1&#xd;&#xa;&#x29; user_logins&#xd;&#xa;on cu.user_pk1 &#x3d; user_logins.user_pk1&#xd;&#xa;left join &#x28;&#xd;&#xa;	select distinct&#xd;&#xa;		cm.crspk1,&#xd;&#xa;		sum&#x28;logs.amount&#x29; over &#x28;partition by cm.crspk1&#x29; as amount&#xd;&#xa;	from bb_bb60.course_users cu&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1 as crspk1&#xd;&#xa;		from bb_bb60.course_main&#xd;&#xa;	&#x29; cm &#xd;&#xa;	on cu.crsmain_pk1 &#x3d; cm.crspk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			user_pk1,&#xd;&#xa;			count&#x28;&#x2a;&#x29; as amount&#xd;&#xa;		from bb_bb60.activity_accumulator aa&#xd;&#xa;		where aa.event_type &#x3d; &#x27;LOGIN_ATTEMPT&#x27;&#xd;&#xa;		and aa.data like &#x27;&#x25;Login succeeded.&#x25;&#x27;&#xd;&#xa;		group by user_pk1&#xd;&#xa;	&#x29; logs&#xd;&#xa;	on cu.users_pk1 &#x3d; logs.user_pk1&#xd;&#xa;	order by cm.crspk1&#xd;&#xa;&#x29; course_logins&#xd;&#xa;on cu.crsmain_pk1 &#x3d; course_logins.crspk1&#xd;&#xa;&#xd;&#xa;left join &#x28;&#xd;&#xa;	select&#xd;&#xa;		course_pk1,&#xd;&#xa;		user_pk1,&#xd;&#xa;		count&#x28;&#x2a;&#x29; as amount&#xd;&#xa;	from bb_bb60.activity_accumulator aa&#xd;&#xa;	where aa.event_type &#x3d; &#x27;COURSE_ACCESS&#x27;&#xd;&#xa;	and aa.data like &#x27;&#x25;execute&#x25;modulepage&#x25;view&#x27;&#xd;&#xa;	group by course_pk1, user_pk1&#xd;&#xa;&#x29; user_sessions&#xd;&#xa;on cu.crsmain_pk1 &#x3d; user_sessions.course_pk1 and cu.user_pk1 &#x3d; user_sessions.user_pk1&#xd;&#xa;left join &#x28;&#xd;&#xa;	select distinct&#xd;&#xa;		icu.crsmain_pk1,&#xd;&#xa;		sum&#x28;aa.amount&#x29; over &#x28;partition by icu.crsmain_pk1&#x29; as amount&#xd;&#xa;	from bb_bb60.course_users icu&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			course_pk1,&#xd;&#xa;			user_pk1,&#xd;&#xa;			count&#x28;&#x2a;&#x29; as amount&#xd;&#xa;		from bb_bb60.activity_accumulator&#xd;&#xa;		where event_type &#x3d; &#x27;COURSE_ACCESS&#x27;&#xd;&#xa;		and data like &#x27;&#x25;execute&#x25;modulepage&#x25;view&#x27;&#xd;&#xa;		group by course_pk1, user_pk1&#xd;&#xa;	&#x29; aa&#xd;&#xa;	on icu.crsmain_pk1 &#x3d; aa.course_pk1 and icu.users_pk1 &#x3d; aa.user_pk1&#xd;&#xa;&#x29; course_sessions&#xd;&#xa;on cu.crsmain_pk1 &#x3d; course_sessions.crsmain_pk1&#xd;&#xa;&#xd;&#xa;left join &#x28;&#xd;&#xa;	select&#xd;&#xa;		course_pk1,&#xd;&#xa;		user_pk1,&#xd;&#xa;		count&#x28;&#x2a;&#x29; as amount&#xd;&#xa;	from bb_bb60.activity_accumulator aa&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			lesson_ind&#xd;&#xa;		from bb_bb60.course_contents&#xd;&#xa;	&#x29; cc&#xd;&#xa;	on aa.content_pk1 &#x3d; cc.pk1&#xd;&#xa;	where event_type &#x3d; &#x27;CONTENT_ACCESS&#x27;&#xd;&#xa;	and cc.lesson_ind &#x3d; &#x27;Y&#x27;&#xd;&#xa;	group by course_pk1, user_pk1&#xd;&#xa;&#x29; user_cont&#xd;&#xa;on cu.crsmain_pk1 &#x3d; user_cont.course_pk1 and cu.user_pk1 &#x3d; user_cont.user_pk1&#xd;&#xa;left join &#x28;&#xd;&#xa;	select distinct&#xd;&#xa;		icu.crsmain_pk1,&#xd;&#xa;		sum&#x28;aa.amount&#x29; over &#x28;partition by icu.crsmain_pk1&#x29; as amount&#xd;&#xa;	from bb_bb60.course_users icu&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			course_pk1,&#xd;&#xa;			user_pk1,&#xd;&#xa;			count&#x28;&#x2a;&#x29; as amount&#xd;&#xa;		from bb_bb60.activity_accumulator aa&#xd;&#xa;		left join &#x28;&#xd;&#xa;			select&#xd;&#xa;				pk1,&#xd;&#xa;				lesson_ind&#xd;&#xa;			from bb_bb60.course_contents&#xd;&#xa;		&#x29; cc&#xd;&#xa;		on aa.content_pk1 &#x3d; cc.pk1&#xd;&#xa;		where event_type &#x3d; &#x27;CONTENT_ACCESS&#x27;&#xd;&#xa;		and cc.lesson_ind &#x3d; &#x27;Y&#x27;&#xd;&#xa;		group by course_pk1, user_pk1&#xd;&#xa;	&#x29; aa&#xd;&#xa;	on icu.crsmain_pk1 &#x3d; aa.course_pk1 and icu.users_pk1 &#x3d; aa.user_pk1&#xd;&#xa;&#x29; course_cont&#xd;&#xa;on cu.crsmain_pk1 &#x3d; course_cont.crsmain_pk1&#xd;&#xa;&#xd;&#xa;left join &#x28;&#xd;&#xa;	select distinct&#xd;&#xa;		ums.users_pk1,&#xd;&#xa;		co.crspk1,&#xd;&#xa;		sum&#x28;ums.msg_read_count&#x29; over &#x28;partition by co.crspk1, ums.users_pk1&#x29; as user_total,&#xd;&#xa;		sum&#x28;ums.msg_read_count&#x29; over &#x28;partition by co.crspk1&#x29; as course_total&#xd;&#xa;	from bb_bb60.user_msg_state ums&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			forummain_pk1&#xd;&#xa;		from bb_bb60.msg_main&#xd;&#xa;	&#x29; mm &#xd;&#xa;	on ums.msgmain_pk1 &#x3d; mm.pk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			confmain_pk1&#xd;&#xa;		from bb_bb60.forum_main&#xd;&#xa;	&#x29; fm&#xd;&#xa;	on mm.forummain_pk1 &#x3d; fm.pk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			conference_owner_pk1&#xd;&#xa;		from bb_bb60.conference_main&#xd;&#xa;	&#x29; cm &#xd;&#xa;	on fm.confmain_pk1 &#x3d; cm.pk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			ico.pk1,&#xd;&#xa;			&#x28;case ico.owner_table&#xd;&#xa;				when &#x27;GROUPS&#x27; then g.crsmain_pk1&#xd;&#xa;				when &#x27;COURSE_MAIN&#x27; then ico.owner_pk1 &#xd;&#xa;				else null&#xd;&#xa;			end&#x29; as crspk1&#xd;&#xa;		from bb_bb60.conference_owner ico&#xd;&#xa;		left join &#x28;&#xd;&#xa;			select&#xd;&#xa;				pk1,&#xd;&#xa;				crsmain_pk1&#xd;&#xa;			from bb_bb60.groups&#xd;&#xa;		&#x29; g&#xd;&#xa;		on ico.owner_pk1 &#x3d; g.pk1 and ico.owner_table &#x3d; &#x27;GROUPS&#x27;&#xd;&#xa;	&#x29; co&#xd;&#xa;	on cm.conference_owner_pk1 &#x3d; co.pk1&#xd;&#xa;&#x29; forum_views&#xd;&#xa;on cu.crsmain_pk1 &#x3d; forum_views.crspk1 and cu.user_pk1 &#x3d; forum_views.users_pk1&#xd;&#xa;&#xd;&#xa;left join &#x28;&#xd;&#xa;	select distinct&#xd;&#xa;		mm.users_pk1,&#xd;&#xa;		co.crspk1,&#xd;&#xa;		count&#x28;mm.pk1&#x29; over &#x28;partition by mm.users_pk1, co.crspk1&#x29; as user_posts, &#xd;&#xa;		-- AYY THIS IS IMPORTANT&#xd;&#xa;		-- ANONYMOUS POSTS WILL BE COUNTED FOR THE COURSE AVERAGE BUT OBVIOUSLY NOT FOR THE USER RATIO&#xd;&#xa;		count &#x28;mm.pk1&#x29; over &#x28;partition by co.crspk1&#x29; as course_posts&#xd;&#xa;	from bb_bb60.msg_main mm&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			confmain_pk1&#xd;&#xa;		from bb_bb60.forum_main&#xd;&#xa;	&#x29; fm&#xd;&#xa;	on mm.forummain_pk1 &#x3d; fm.pk1&#xd;&#xa;&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			conference_owner_pk1&#xd;&#xa;		from bb_bb60.conference_main&#xd;&#xa;	&#x29; cm&#xd;&#xa;	on fm.confmain_pk1 &#x3d; cm.pk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			ico.pk1,&#xd;&#xa;			&#x28;case ico.owner_table &#xd;&#xa;				when &#x27;COURSE_MAIN&#x27; then ico.owner_pk1&#xd;&#xa;				when &#x27;GROUPS&#x27; then g.crsmain_pk1&#xd;&#xa;				else null&#xd;&#xa;			end&#x29; as crspk1&#xd;&#xa;		from bb_bb60.conference_owner ico&#xd;&#xa;		left join &#x28;&#xd;&#xa;			select&#xd;&#xa;				pk1,&#xd;&#xa;				crsmain_pk1 &#xd;&#xa;			from bb_bb60.groups&#xd;&#xa;		&#x29; g&#xd;&#xa;		on ico.owner_pk1 &#x3d; g.pk1 and ico.owner_table &#x3d; &#x27;GROUPS&#x27;&#xd;&#xa;	&#x29; co&#xd;&#xa;	on cm.conference_owner_pk1 &#x3d; co.pk1&#xd;&#xa;&#x29; forum_posts&#xd;&#xa;on cu.crsmain_pk1 &#x3d; forum_posts.crspk1 and cu.user_pk1 &#x3d; forum_posts.users_pk1&#xd;&#xa;&#xd;&#xa;left join &#x28;&#xd;&#xa;	select&#xd;&#xa;		gm.crspk1,&#xd;&#xa;		cu.users_pk1,&#xd;&#xa;		-- AYY THIS IS IMPORTANT&#xd;&#xa;		-- THE DEFINITIONS OF &#x22;ASSIGNMENT&#x22; AND &#x22;EXAM&#x22; ARE SHIFTY IN PRACTICE&#xd;&#xa;		-- SO MODIFY THESE CONDITIONALS ACCORDINGLY&#xd;&#xa;		sum &#x28;case when gm.type &#x3d; &#x27;Assignment&#x27; then 1 end&#x29; over &#x28;partition by gm.crspk1, cu.users_pk1&#x29; as asn_users_total,&#xd;&#xa;		sum &#x28;case when gm.type &#x3d; &#x27;Assignment&#x27; then 1 end&#x29; over &#x28;partition by gm.crspk1&#x29; as asn_course_total,&#xd;&#xa;		sum &#x28;case when gm.type &#x3d; &#x27;Exam&#x27; then 1 end&#x29; over &#x28;partition by gm.crspk1, cu.users_pk1&#x29; as asmt_users_total,&#xd;&#xa;		sum &#x28;case when gm.type &#x3d; &#x27;Exam&#x27; then 1 end&#x29; over &#x28;partition by gm.crspk1&#x29; as asmt_course_total&#xd;&#xa;	from bb_bb60.attempt att&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1, &#xd;&#xa;			gradebook_main_pk1,&#xd;&#xa;			course_users_pk1&#xd;&#xa;		from bb_bb60.gradebook_grade&#xd;&#xa;	&#x29; gg&#xd;&#xa;	on att.gradebook_grade_pk1 &#x3d; gg.pk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			igm.pk1,&#xd;&#xa;			igm.crsmain_pk1 as crspk1,&#xd;&#xa;			gt.namerx as type&#xd;&#xa;		from bb_bb60.gradebook_main igm&#xd;&#xa;		left join &#x28;&#xd;&#xa;			select&#xd;&#xa;				pk1,&#xd;&#xa;				regexp_substr&#x28;name, &#x27;&#x5b;&#x5e;&#x5c;.&#x5d;&#x2a;&#x27;&#x29; as namerx&#xd;&#xa;			from bb_bb60.gradebook_type&#xd;&#xa;		&#x29; gt&#xd;&#xa;		on igm.gradebook_type_pk1 &#x3d; gt.pk1&#xd;&#xa;	&#x29; gm&#xd;&#xa;	on gg.gradebook_main_pk1 &#x3d; gm.pk1&#xd;&#xa;	left join &#x28;&#xd;&#xa;		select&#xd;&#xa;			pk1,&#xd;&#xa;			users_pk1&#xd;&#xa;		from bb_bb60.course_users&#xd;&#xa;	&#x29; cu&#xd;&#xa;	on gg.course_users_pk1 &#x3d; cu.pk1&#xd;&#xa;&#x29; attempts&#xd;&#xa;on cu.crsmain_pk1 &#x3d; attempts.crspk1 and cu.user_pk1 &#x3d; attempts.users_pk1&#xd;&#xa;&#xd;&#xa;where cm.course_id &#x3d; &#x3f;</sql>
+    <limit>0</limit>
+    <lookup>read course ids from file</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1074</xloc>
+      <yloc>491</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>read course ids from file</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <accept_filenames>Y</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field>cl</accept_field>
+    <accept_stepname>get filenames</accept_stepname>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>N</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>DOS</format>
+    <encoding/>
+    <add_to_result_filenames>N</add_to_result_filenames>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>course_id</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>-1</position>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1079</xloc>
+      <yloc>1133</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>statement to lrs</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <applicationType>JSON</applicationType>
+    <method>POST</method>
+    <url>http&#x3a;&#x2f;&#x2f;127.0.0.1&#x3a;8080&#x2f;larissa&#x2f;xAPI&#x2f;statements</url>
+    <urlInField>N</urlInField>
+    <dynamicMethod>N</dynamicMethod>
+    <methodFieldName/>
+    <urlField/>
+    <bodyField>statement</bodyField>
+    <httpLogin>cfk</httpLogin>
+    <httpPassword>Encrypted 2be98afc86aa79ad7fa4cfd7edcc1bddd</httpPassword>
+    <proxyHost/>
+    <proxyPort/>
+    <preemptive>N</preemptive>
+    <trustStoreFile/>
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <headers>
+      <header>
+        <field>xApiVersion</field>
+        <name>X-Experience-API-Version</name>
+        </header>
+      </headers>
+    <parameters>
+      </parameters>
+    <result>
+      <name>response</name>
+      <code/>
+      <response_time/>
+      </result>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1795</xloc>
+      <yloc>823</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
